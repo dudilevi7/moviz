@@ -1,6 +1,6 @@
-const data = require('../../db/duumy-data.json');
+const data = require('../../db/dummy-data.json');
 const mapMoviesToTable = require('../../lib/map-movies-to-table');
-const columnSort = require('../../lib/sort-utils');
+const { columnSort, getFixedPageNumber } = require('../../lib/utils');
 
 const getMovies = async (req, res) => {
     try {
@@ -20,7 +20,7 @@ const getMovies = async (req, res) => {
 
         const availableMovies = movies.length
         const rowsPerPage = parseInt(pageSize)
-        const pageNumber = parseInt(availableMovies <= rowsPerPage ? 1 : pageNum)
+        const pageNumber = getFixedPageNumber(pageNum, rowsPerPage, availableMovies) 
         const startIndex = (pageNumber - 1) * rowsPerPage
         const endIndex = pageNumber * rowsPerPage
         movies = movies.slice(startIndex, endIndex)

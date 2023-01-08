@@ -15,5 +15,11 @@ const columnSort = {
     director: (a, b) => lexicalComparison(a?.director, b?.director),
     actors: (a, b) => arrayComparsion(a.actors, b.actors)
 }
-
-module.exports = columnSort
+const getFixedPageNumber = (page, rowsPerPage, availableMovies) => {
+    let pageNumber = parseInt(page)
+    return availableMovies <= (rowsPerPage * pageNumber) ? 1 : pageNumber
+}
+module.exports = { 
+    columnSort,
+    getFixedPageNumber,
+}

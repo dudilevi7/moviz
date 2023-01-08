@@ -12,4 +12,5 @@ const mapMoviesToTable = (movies = []) => {
     const columns = ['Title', 'Rank', 'Year', 'Director', 'Actors']
     return { rowsData, columns }
 }
+
 module.exports = mapMoviesToTable
