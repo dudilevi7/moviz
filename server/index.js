@@ -14,7 +14,7 @@ app.use(cors())
 app.use('/api/v1/', api)
 
 app.listen(PORT, () => {
-    console.info(`moviz server is up and running on ${PORT}`)
+    console.log(`moviz server is up and running on ${PORT}`)
 })
 
 process.on('uncaughtException', (err) => {

@@ -12,7 +12,6 @@ const Table = () => {
     const [data, setData] = useState({})
     const [error, setError] = useState(false)
 
-
     const fetchData = useCallback(async (overrideParams = {}) => {
         const {
             search,
@@ -49,7 +48,6 @@ const Table = () => {
                 if (data) {
                     setTimeout(() => {
                         setError(false)
-                        console.log({ data })
                         setData(data)
                     }, 500)
                 }
@@ -86,7 +84,7 @@ const Table = () => {
         responsive: 'standard',
         tableBodyHeight: '100%',
         serverSide: true,
-        rowsPerPageOptions: [5, 10, 30, 50, 70],
+        rowsPerPageOptions: [10, 30, 50, 70],
         onSearchChange: onSearchInputChange,
         onColumnSortChange: onSortChange,
         onChangePage: onChangePageNum,

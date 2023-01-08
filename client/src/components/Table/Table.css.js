@@ -22,6 +22,14 @@ const createMuiTheme = (bgcolor , color) =>
                 styleOverrides: {
                     root: {
                         margin: '10px 30px',
+                    },
+                    
+                }
+            },
+            MuiTableRow: {
+                styleOverrides: {
+                    root: {
+                        animation: 'fade 1s ease forwards'
                     }
                 }
             },
