@@ -52,7 +52,7 @@ const Table = () => {
                     }, 500)
                 }
                 else {
-                    setError()
+                    setError(true)
                 }
             }
             initializeData()
