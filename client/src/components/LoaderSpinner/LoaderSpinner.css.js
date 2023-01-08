@@ -4,7 +4,7 @@ import { COLORS } from '../../consts';
 const useStyles = createUseStyles({
     container: {
         margin: '10px auto',
-        height: '500px'
+        height: '80vh'
     },
     loader: {
         padding: '10px',
